@@ -17,8 +17,8 @@ Sorties:
 
 Variables
 
-| Nom Variable  | Description                       |Type  |Variable/Constante  |
-| :-----------: | :-------------------------------: | :--: | :-------: |
+| Nom Variable  | Description                       | Type |Variable/Constante  |
+| ------------- | --------------------------------- | ---- | --------- |
 | TAUX_TAXE     | taux de taxe                      | Réel | Constante | 
 | montant_achat | montant du client                 | Réel | Variable  | 
 | montant_rabais| montant du rabais                 | Réel | Variable  | 
