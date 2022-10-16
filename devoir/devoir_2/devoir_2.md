@@ -16,16 +16,17 @@ Sorties:
 - Message du Montant Total.
 
 Variables
-##################################################################################
-# Nom Variable___#_Description_______________________# Type_#_Variable/Constante #
-# TAUX_TAXE      | taux de taxe                      | Réel | Constante          #
-# montant_achat  | montant du client                 | Réel | Variable           #
-# montant_rabais | montant du rabais                 | Réel | Variable           #
-# montant_total  | montant après taxe et rabais      | Réel | Variable           #
-# reponse        | Variable de contrôle de continuer | Char | Variable           #
-# continuer      | Variable de contrôle de boucle    | Bool | Variable           #
-##################################################################################
 
+| Nom Variable  | Description                       |Type  |Variable/Constante  |
+| :-----------: | :-------------------------------: | :--: | :-------: |
+| TAUX_TAXE     | taux de taxe                      | Réel | Constante | 
+| montant_achat | montant du client                 | Réel | Variable  | 
+| montant_rabais| montant du rabais                 | Réel | Variable  | 
+| montant_total | montant après taxe et rabais      | Réel | Variable  | 
+| reponse       | Variable de contrôle de continuer | Char | Variable  | 
+| continuer     | Variable de contrôle de boucle    | Bool | Variable  | 
+
+```
 ## Pseudo-Code
 
 Début
@@ -65,3 +66,4 @@ Début
     Fin tant que
     Afficher("Sortie du programme.....")
 Fin
+```
