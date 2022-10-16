@@ -2,7 +2,7 @@
 
 Énoncé: Écrire un algorithme qui lit deux nombres a et b au clavier et affiche le plus grand des deux. Afficher
 un message approprié lorsque l’utilisateur saisit deux nombres égaux.
-
+```
 Pseudo-Code
 
 Début
@@ -22,12 +22,12 @@ Début
     Fin si
     Afficher("Le plus grand nomrbe est: ", b)
 Fin
-
+```
 # Exercice 2
 
 Énoncé: Écrire un programme qui lit deux entiers a et b au clavier et affiche un message indiquant s’ils sont
 successifs ou non. On définit deux nombres successifs si leur différence en absolue est égale à 1.
-
+```
 Pseudo-Code
 
 Début
@@ -45,7 +45,7 @@ Début
         Afficher("Les deux entiers sont successfis.")
     Fin si
 Fin
-
+```
 # Exercice 3
 
 Énoncé: Écrire un programme qui lit un nombre représentant la vitesse d’un véhicule et affiche à l’écran ce qui
@@ -53,7 +53,7 @@ suit :
 -  Vitesse correcte si la vitesse est entre 60 et 100
 -  Trop lent si la vitesse est inférieure strictement à 60
 -  Trop rapide si la vitesse est supérieure strictement à 100
-
+```
 Pseudo-Code
 
 Début
@@ -71,13 +71,13 @@ Début
     Fin si
     Afficher("La vitesse du véhicule est correcte.")
 Fin
-
+```
 # Exercice 4
 
 Énoncé: Écrire un algorithme qui lit trois nombres A, B, C et qui détermine si l’un est égal à la somme des
 deux autres. Si un tel nombre existe, l’afficher sinon afficher aucun nombre des 3 n’est égal à la
 somme des autres
-
+```
 Pseudo-Code
 
 Début
@@ -103,7 +103,7 @@ Début
         Fin si
     Fin si
 Fin
-
+```
 # Exercice 5
 
 Énoncé: Écrire un algorithme qui permet de calculer le périmètre ou la surface d’un carré selon le choix donné
@@ -111,7 +111,7 @@ par l’utilisateur. Si l’utilisateur tape la lettre P comme choix, vous calcu
 lettre S comme choix, on calcule la surface. Sachant que le périmètre du carré est égal au côté
 multiplié par 4 et la surface est égale au côté au carré. Le côté est un entier positif à lire sur l'entrée
 standard. Vous devez accepter que des nombres positifs et non nuls.
-
+```
 Pseudo-code
 
 Début
@@ -132,12 +132,12 @@ Début
         Fin si
     Fin si
 Fin
-
+```
 # Exercice 6
 
 Énoncé: Écrire un algorithme qui, à partir d’un nombre compris entre 0 et 9 inclusivement, affiche le nombre
 en toutes lettres sinon affiche un message approprié.
-
+```
 Pseudo-Code
 
 Début
@@ -157,12 +157,12 @@ Début
     9 Afficher("neuf")
     Afficher("Erreur, nombre n'est pas un entier ou n'est pas entre 0 et 9")
 Fin
-
+```
 # Exercice 7
 
 Énoncé: Écrire un algorithme qui, à partir d’un nombre compris entre 1 et 7, affiche le jour correspondant (1
 pour Lundi, 2 pour Mardi et etc.) sinon affiche non valide.
-
+```
 Pseudo-Code
 
 Début
@@ -179,12 +179,12 @@ Début
     7 Afficher("Dimanche")
     Afficher("Erreur, nombre n'est pas entre 1 et 7")
 Fin
-
+```
 # Exercice 8
 
 Énoncé: Écrire un algorithme qui lit trois nombres au clavier a, b et c et affiche le plus petit parmi ces trois
 nombres.
-
+```
 Pseudo-Code
 
 Début
@@ -213,3 +213,4 @@ Début
     Fin si
     Afficher("Tout les nombres sont égaux.")
 Fin
+```
