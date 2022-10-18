@@ -1,8 +1,8 @@
-''' Author: Antoine Langevin Date: 2022-10-12, Update: 2022-10-12. 
+''' Author: Antoine Langevin Date: 2022-10-12, Update: 2022-10-17.
  Programme pour calculer le montant total à payer pour des clients. '''
 
 # ---- Variables
-# ---- montant_achat, montant_taxe, montant_rabais, montant_total, TAUX_TAXE: Réels
+# ---- montant_achat, montant_taxe, montant_rabais, montant_total, TAUX_TAXE, montant_temp: Réels
 # ---- continuer: Bool
 # ---- montant_achat: Str
 
@@ -11,10 +11,9 @@ print("\n")
 
 # Initialisation
 TAUX_TAXE = 0.15
-continuer = True
 
 # Traitement
-while continuer:
+while input("Continuer? n/N pour sortir: ") not in ('n','N'):
     montant_rabais = 0
     rabais_type = "00%"
     try:
@@ -22,20 +21,22 @@ while continuer:
     except ValueError:
         print("Entrez un nombre, pas des charactères spéciaux ou des lettres.")
     else:
-        if 250 >= montant_achat >= 100:
-            montant_rabais = montant_achat * 0.05
-            rabais_type = "05%"
-        elif 500 >= montant_achat > 250:
+        if montant_achat > 500:
+            montant_rabais = montant_achat * 0.2
+            rabais_type = "20%"
+        elif montant_achat > 250:
             montant_rabais = montant_achat * 0.1
             rabais_type = "10%"
-        elif montant_achat > 500:
-            rabais_type = "20%"
-            montant_rabais = montant_achat * 0.2
-        
-        montant_taxes = (montant_achat - montant_rabais) * TAUX_TAXE
-        montant_total = (montant_achat - montant_rabais) + montant_taxes
+        elif montant_achat >= 100:
+            rabais_type = "05%"
+            montant_rabais = montant_achat * 0.05
 
-        # Donner un bon format aux valeurs. N'est pas nécessaire au programme, uniquement pour du visuel.
+        mont_temp = montant_achat - montant_rabais
+        montant_taxes = mont_temp * TAUX_TAXE
+        montant_total = mont_temp + montant_taxes
+
+        # Donner un bon format aux valeurs. N'est pas nécessaire au programme
+        # uniquement pour du visuel.
         montant_achat = "{:.2f}".format(montant_achat)
         montant_rabais = "{:.2f}".format(montant_rabais)
         montant_taxes = "{:.2f}".format(montant_taxes)
@@ -50,7 +51,4 @@ while continuer:
         print(f"* Montant total:    {montant_total}$")
         print("* ------------------------*")
         print("\n")
-
-        if input("Continuer? n/N pour sortir: ") in ('n','N'):
-            continuer = False
-            print("Sortie du programme...")
+print("Sortie du programme...")
