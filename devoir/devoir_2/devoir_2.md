@@ -16,17 +16,16 @@ Sorties:
 - Message du Montant Total.
 
 Variables
+##################################################################################
+Nom Variable   |Description                        |Type  | Variable/Constante 
+TAUX_TAXE      | taux de taxe                      | Réel | Constante          
+montant_achat  | montant du client                 | Réel | Variable           
+montant_rabais | montant du rabais                 | Réel | Variable           
+montant_total  | montant après taxe et rabais      | Réel | Variable           
+reponse        | Variable de contrôle de continuer | Char | Variable           
+continuer      | Variable de contrôle de boucle    | Bool | Variable           
+##################################################################################
 
-| Nom Variable  | Description                       | Type |Variable/Constante  |
-| ------------- | --------------------------------- | ---- | --------- |
-| TAUX_TAXE     | taux de taxe                      | Réel | Constante | 
-| montant_achat | montant du client                 | Réel | Variable  | 
-| montant_rabais| montant du rabais                 | Réel | Variable  | 
-| montant_total | montant après taxe et rabais      | Réel | Variable  | 
-| reponse       | Variable de contrôle de continuer | Char | Variable  | 
-| continuer     | Variable de contrôle de boucle    | Bool | Variable  | 
-
-```
 ## Pseudo-Code
 
 Début
@@ -43,11 +42,9 @@ Début
         Lire(montant)
         Si montant >= 100 et montant <= 250 alors
             montant_rabais <--- montant * 0.05
-        Fin Si
-        Si montant > 250 et montant <= 500 alors
+        Sinon Si montant > 250 et montant <= 500 alors
             montant_rabais <--- montant * 0.1
-        Fin Si
-        Si montant > 500 alors
+        Sinon Si montant > 500 alors
             montant_rabais <--- montant * 0.2
         Fin Si
         montant_taxe <--- (montant - montant_rabais) * TAUX_TAXE
@@ -66,4 +63,3 @@ Début
     Fin tant que
     Afficher("Sortie du programme.....")
 Fin
-```
