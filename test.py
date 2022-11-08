@@ -1,20 +1,38 @@
-# Va afficher chaque charactère de la Str.
-for cara in ' bon matin':
-    print(cara)
+#!/usr/bin/env python
+"""
+Produces load on all available CPU cores
 
-# Va afficher i et s'il est pair ou impair.
-for i in range(10):
-    if i % 2 == 0: 
-        print(i, 'nombre pair')
-    else :
-        print(i, 'nombre impair')
+Updated with suggestion to prevent Zombie processes
+Linted for Python 3
+Source: 
+insaner @ https://danielflannery.ie/simulate-cpu-load-with-python/#comment-34130
+"""
+from multiprocessing import Pool
+from multiprocessing import cpu_count
+
+import signal
+
+stop_loop = 0
 
 
-print('\n')
-vitesse = float(input('Vitesse: '))
-if vitesse > 100:
-    print('Trop Rapide')
-elif vitesse < 60:
-    print('Trop lent')
-else:
-    print('Correct')
+def exit_chld(x, y):
+    global stop_loop
+    stop_loop = 1
+
+
+def f(x):
+    global stop_loop
+    while not stop_loop:
+        x*x
+
+
+signal.signal(signal.SIGINT, exit_chld)
+
+if __name__ == '__main__':
+    processes = cpu_count()
+    print('-' * 20)
+    print('Running load on CPU(s)')
+    print('Utilizing %d cores' % processes)
+    print('-' * 20)
+    pool = Pool(processes)
+    pool.map(f, range(processes))

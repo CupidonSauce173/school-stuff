@@ -8,3 +8,11 @@ while lettre != 'o':
         print(lettre)
     lettre = input('Lettre: ')
 print('a et e:', rep)
+
+"""
+tewte
+
+"""
+
+'''
+'''

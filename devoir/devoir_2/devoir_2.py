@@ -17,9 +17,9 @@ while input("Continuer? n/N pour sortir: ") not in ('n','N'):
     montant_rabais = 0
     rabais_type = "00%"
     try:
-        montant_achat = float(input("Entrez le montant de l'achat du client: "))
+        montant_achat = float(input("Entrer le montant de l'achat du client: "))
     except ValueError:
-        print("Entrez un nombre, pas des charactères spéciaux ou des lettres.")
+        print("Entrer un nombre, pas des charactères spéciaux ou des lettres.")
     else:
         if montant_achat > 500:
             montant_rabais = montant_achat * 0.2
