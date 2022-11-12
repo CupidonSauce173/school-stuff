@@ -62,7 +62,7 @@ class Client:
                     voulez-vous refaire les prix? y/Y pour continuer: ") in ['y', 'Y']:
                     self.init_prix()
                     self.validate_informations()
-            return passed
+        return passed
 
     def calculer_sous_total(self) -> float:
         ''' Calculer le sous-total avant pourboire et taxe. '''
