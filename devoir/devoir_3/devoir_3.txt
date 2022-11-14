@@ -1,0 +1,86 @@
+Début
+    Variables
+      status, not_finished: Bool
+      TAUX_TAXE, entree, plat_p, dessert, boisson, prix_pourboire, 
+          prix_taxe, total, payee, monnaie: Float
+      facture_id, nbre_table, i, pourboire: Int
+    status <---- Vrai
+    TAUX_TAXE <---- 0.15
+    facture_id <---- 0
+    nbre_table <---- 0
+
+    tant que status == Vrai:
+        Afficher("Nombre de client sur la table: ")
+        Lire(NBRE_CLIENTS)
+        Si NBRE_CLIENTS < 0 alors
+            Afficher("Information non valide; Entrez un nombre positif.")
+        Sinon
+            total_table <---- 0
+            Pour i dans NBRE_CLIENTS
+                Afficher("Traitement client:", i)
+                not_finished <---- Vrai
+                Tant que not_finished alors:
+                    Afficher("Prix de l'entrée: ")
+                    Lire(entree)
+                    Afficher("Prix du plat principal: ")
+                    Lire(plat_p)
+                    Afficher("Prix du dessert: ")
+                    Lire(dessert)
+                    Afficher("Prix de la boisson: ")
+                    Lire(boisson)
+                    Si entree < 0 ou plat_p < 0 ou dessert < 0 ou boisson < 0 alors
+                        Afficher("Information non valide; Entrez un nombre positif.")
+                    Sinon 
+                        not_finished <---- Faux
+                    Fin si
+                Fin Tant que
+                sous_total <---- Arrondire(entree + plat_p + dessert + boisson)
+                Afficher("Sous-total:", sous_total, "$")
+                Afficher("Pourboire (minimum 10%):")
+                Lire(pourboire)
+                Si pourboire < 10:
+                    poubroire <---- 10
+                Fin Si
+                prix_pourboire <---- Arrondire((sous_total * pourboire) / 100)
+                prix_taxe <---- Arrondire((sous_total + prix_pourboire) * TAUX_TAXE)
+                total <---- sous_total + prix_pourboire + prix_taxe
+
+                Afficher("À Payer:", total)
+                Afficher("Montant payé par le client: ")
+                Lire(payee)
+                Tant que payee < total alors
+                    Afficher("Montant trop petit.")
+                    Afficher("Montant payé par le client: ")
+                    Lire(payee)
+                Fin tant que
+                monnaie <---- Arrondire(total - payee)
+                Afficher("Monnaie:", monnaie, "\n\n")
+                
+                Afficher("Facture NO:", facture_id)
+                Afficher("Reçu")
+                Afficher("Entrée:", entree)
+                Afficher("Plat Principal:", plat_p)
+                Afficher("Boisson:", boisson)
+                Afficher("SOUS-TOTAL", sous_total)
+                Afficher(sous_total, "Pourboire(", pourboire, ")% ", prix_pourboire)
+                Afficher(sous_total + prix_pourboire, "TAXES(", TAUX_TAXE * 100, ")% ", prix_taxe)
+                Afficher("TOTAL:", total)
+                Afficher("PAYÉ:", payee)
+                Si monnaie != 0 alors
+                    Afficher("\nMONNAIE:", monnaie)
+                Fin si
+                Afficher("Au plaisir de vous revoir!")
+                Afficher("*** COPIE DU CLIENT ***")
+                total_table <---- total_table + 1
+                facture_id <---- facture_id + 1
+            Fin Pour 
+            nbre_table <---- nbre_table + 1
+            Afficher("TABLES:", nbre_table)
+            Afficher("Total:", total_table, "$")
+        Fin Si
+        Afficher("Continuer? y/Y: ")
+        Lire(status)
+        status <---- status == 'y' ou status == 'Y'
+            
+        
+                
