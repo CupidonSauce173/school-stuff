@@ -14,7 +14,9 @@ nbre_table = 0
 
 while status:
     NBRE_CLIENTS = int(input('Nombre de client sur la table: '))
-    if NBRE_CLIENTS > 0:
+    if NBRE_CLIENTS < 0:
+        print('Information non valide; Entrez un nombre positif.')
+    else:
         total_table = 0
         for i in range(NBRE_CLIENTS):
             print(f"Traitement client: {i}")
@@ -82,7 +84,5 @@ while status:
         nbre_table += 1
         print(f"TABLES: {nbre_table}")
         print(f"Total: {total_table}$")
-    else:
-        print('Information non valide.')
     #Fin si
     status = input('Continuer? y/Y: ') in ['y', 'Y']
