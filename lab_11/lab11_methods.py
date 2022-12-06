@@ -35,6 +35,7 @@ def sum_average(target_list: list) -> list:
             total += nbr
         except ValueError:
             print('Une ou plusieurs valeurs dans la liste ne sont pas des nombres.')
+    # end for
     try:
         average = total / len(target_list)
     except ZeroDivisionError:
@@ -60,7 +61,10 @@ def count_occurences(target_string: str, search: str) -> int:
         for char in target_string:
             if char.lower() == search.lower():
                 occurences += 1
+            # end if
+        # end for
         return occurences
+    # end if
     return 0
 
 def absolute_value(nbr: int) -> int:
@@ -75,9 +79,11 @@ def absolute_value(nbr: int) -> int:
     """
     if nbr >= 0:
         return nbr
+    # end if
     nbr = str(nbr)
     if nbr[0] == '-':
         return int(nbr[1:])
+    # end if
     print("Problème avec la conversion... Retourne 0")
     return 0
 
@@ -95,6 +101,7 @@ def first_last_string(target_string: str) -> list:
     if len(target_string) < 0:
         print("Chaîne trop courte Retourn une liste avec [0,0]")
         return [0,0]
+    # end if
     return [target_string[0], target_string[-1]]
 
 def sort_highest_lowest(target_lst: list) -> list:

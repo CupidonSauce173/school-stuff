@@ -12,6 +12,7 @@ print("-- WHILE LOOP --")
 while len(inputList) > 0:
     reversedInput.append(inputList[-1])
     inputList.pop()
+# end while
 print("Résultat: " + " ".join(reversedInput))
 
 print("-- FOR LOOP --")
@@ -19,6 +20,7 @@ inputList = userInput.split(' ')
 reversedInput = []
 for word in inputList:
     reversedInput.append(word)
+# end while
 reversedInput.reverse()
 print("Résultat: " + " ".join(reversedInput))
 

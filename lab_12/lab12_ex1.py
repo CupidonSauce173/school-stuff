@@ -17,4 +17,5 @@ def square_cube_list(limite: int) -> list:
     square_cube_lst = []
     for i in range(1, limite + 1):
         square_cube_lst.append([i ** 2, i ** 3])
+    # end for
     return square_cube_lst

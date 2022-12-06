@@ -8,4 +8,5 @@ userInput = input(MESSAGE)
 while userInput != '':
     print(f"Taille de la chaîne: {str(len(userInput))}")
     userInput = input(MESSAGE)
+# end while
 print('*** Fin du programme ***')
