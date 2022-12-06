@@ -14,6 +14,7 @@ lst_char_ASCII = []
 for i in range(LIMITE):
     random_char = randint(0, 126)
     lst_char_ASCII.append([random_char, chr(random_char)])
+# end for
 
 print("*** Liste [char, ASCII] ***")
 print(lst_char_ASCII)

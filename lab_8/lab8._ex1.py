@@ -14,4 +14,6 @@ for i in range(LIMITE):
         lst_entiers.append(8 ** 2)
     else:
         lst_entiers.append(randint(0, 100))
+    # end if
+# end for
 print(lst_entiers)

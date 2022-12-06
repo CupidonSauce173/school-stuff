@@ -14,7 +14,7 @@ for i in range(LIMITE):
     random_char = randint(0, 126)
     lst_char.append(chr(random_char))
     lst_ASCII.append(random_char)
-
+# end for
 print("*** Liste de chars ***")
 print(lst_char)
 print("*** Liste de la valeur ASCII des chars ***")
