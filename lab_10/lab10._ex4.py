@@ -28,8 +28,10 @@ while user_input not in ('T', 't'):
         sentence = input(INPUT_MESSAGE)
         if sentence[0] == ' ':
             sentence = sentence[1:]
+        # end if
         if sentence[-1] == ' ':
             sentence = sentence[:-1]
+        # end if
         print(sentence)
     elif user_input in ('C', 'c'):
         target_string = input(INPUT_MESSAGE)
@@ -38,6 +40,9 @@ while user_input not in ('T', 't'):
             print('Entrez uniquement un caractère.')
         else:
             print(f'Occurences de {target_char}: {target_string.count(target_char)}')
+        # end if
+    # end if
     print(MENUSTRING)
     user_input = input(CHOIX_MESSAGE)
+# end while
 print('*** Fin du programme ***')

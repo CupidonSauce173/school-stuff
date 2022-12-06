@@ -116,9 +116,12 @@ def sort_highest_lowest(target_lst: list) -> list:
         for elem in target_lst:
             if elem < smallest[1]:
                 smallest = [i, elem]
+            # end if
             i += 1
+        # end for
         smallest_lst.append(smallest[1])
         target_lst.pop(smallest[0])
+    # end while
 
     # Highest to smallest.
     reversed_lst = smallest_lst.copy()
@@ -140,4 +143,5 @@ def power(base: int, exposant: int) -> int:
     if base < 0 and exposant < 0:
         print("La base ou l'exposant n'est pas un nombre positif. Retourne 0")
         return 0
+    # end if
     return base ** exposant

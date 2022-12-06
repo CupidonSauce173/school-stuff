@@ -20,4 +20,6 @@ def count_remove_doubles(base_lst: list) -> list:
             filtered_lst.append(elem)
         else:
             occurences += 1
+        # end if
+    # end for
     return [filtered_lst, occurences]
