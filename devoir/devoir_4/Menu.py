@@ -23,6 +23,7 @@
 #
 --------------------------------------------------------------------------------------------------
 """
+#pylint:disable=line-too-long
 import sys
 import Valider_Nombre_A22 as saisir_func
 
@@ -31,7 +32,7 @@ TAUX_TPS    = 0.05
 TAUX_TVQ    = 0.09975
 
 #...........................................................................................................................
-def isEmpty(lst_articles: list) -> bool:
+def is_empty(lst_articles: list) -> bool:
     """
     Lis la liste des articles et calcule si elle est vide.
 
@@ -47,20 +48,20 @@ def isEmpty(lst_articles: list) -> bool:
     return False
 
 #...........................................................................................................................
-def chercher_article(lst_articles: list, targetId: int) -> int:
+def chercher_article(lst_articles: list, target_id: int) -> int:
     """
     Recherche un article dans la liste d'articles donné et retourne
     son id si il est déjà dans la liste.
 
     Paramètres :
     lst_articles : Liste actuelle des articles de la facture.
-    targetId     : L'indice (Id) de l'article à chercher dans la liste "articles".
+    target_id     : L'indice (Id) de l'article à chercher dans la liste "articles".
 
     Retourne : L'indice (Id) de l'article s'il est trouvé dans la liste.
     """
     for article in lst_articles:
-        if article[0] == targetId:
-            return targetId
+        if article[0] == target_id:
+            return target_id
         # end if
     # end for
     return -1
@@ -77,11 +78,11 @@ def ajouter_article(lst_articles: list) -> None:
 
     Retourne : None
     """
-    newArticleId = saisir_func.saisir_entier_mini("Id: ", 0)
-    if chercher_article(lst_articles, newArticleId) == -1:
-        lst_articles.append(create_new_article(newArticleId))
+    new_article_id = saisir_func.saisir_entier_mini("Id: ", 0)
+    if chercher_article(lst_articles, new_article_id) == -1:
+        lst_articles.append(create_new_article(new_article_id))
     else:
-        print(f"L'article {newArticleId} est déjà dans la liste.")
+        print(f"L'article {new_article_id} est déjà dans la liste.")
     # end if
 
 #...........................................................................................................................
@@ -99,25 +100,42 @@ def afficher_facture(lst_articles: list, nom: str, prenom: str) -> None:
 
     Retourne : None
     """
-    print("......Facture......")
+    print("Facture")
     print(f"Nom: {nom} Prénom: {prenom}")
-    total_hors_taxes = 0
-    for article in lst_articles:
-        tempPrice = round(article[2] * article[3], 2)
-        total_hors_taxes += tempPrice
-        print(f"{article[0]} {article[1]} Prix: {article[2]} Quantité: {article[3]} Total: {tempPrice}$")
-    print(f"Total Hors Taxes: {total_hors_taxes}$")
+    # Pré-traitements
+    nbre_articles = 0
+    prix_hors_taxes = 0
+    prix_total = 0
+    total_tps = 0
+    total_tvq = 0
+    # [id, nom, prix u, quantité]
+    print("-------------------")
+    for elem in lst_articles:
+        montant_hors_taxes = round(elem[2] * elem[3], 2)
+        prix_tps = round(montant_hors_taxes * TAUX_TPS, 2)
+        prix_tvq = round(montant_hors_taxes * TAUX_TVQ, 2)
+        total_article = round(montant_hors_taxes + prix_tps + prix_tvq, 2)
+        nbre_articles += elem[3]
+        prix_hors_taxes += montant_hors_taxes
+        prix_total += total_article
+        total_tps += prix_tps
+        total_tvq += prix_tvq
 
-    TOTAL_TPS   = round(TAUX_TPS * total_hors_taxes, 2)
-    TOTAL_TVQ   = round(TAUX_TVQ * total_hors_taxes, 2)
-    TOTAL_TAXES = round(TOTAL_TPS + TOTAL_TVQ, 5)
-    TOTAL       = round(TOTAL_TPS + TOTAL_TVQ + total_hors_taxes, 2)
-
-    print(f"TPS: ({TOTAL_TPS}$)({TAUX_TPS * 100}%)")
-    print(f"TVQ: ({TOTAL_TVQ}$)({TAUX_TVQ * 100}%)")
-    print(f"Taxes: {TOTAL_TAXES}$({(round(TAUX_TVQ + TAUX_TPS, 2)) * 100}%)")
-    print(f"TOTAL: {TOTAL}$")
-    print("........................")
+        print(f"Article {elem[0]}")
+        print(f"Prix unitaire: {elem[2]}$")
+        print(f"Désignation: {elem[1]}")
+        print(f"Quantité: {elem[3]}")
+        print(f"Montant Hors Taxes: {montant_hors_taxes}$")
+        print(f"TPS: {prix_tps}$")
+        print(f"TVQ: {prix_tvq}$")
+        print(f"Prix Total: {total_article}$")
+        print("-------------------")
+    # end for
+    print(f"Nombre d'articles achetés: {nbre_articles}")
+    print(f"Montant Sans Taxes: {prix_hors_taxes}$")
+    print(f"TPS: {total_tps}$")
+    print(f"TVQ: {total_tvq}$")
+    print(f"Montant Avec TTC: {prix_total}$")
 #...........................................................................................................................
 def afficher_sommaire(lst_articles: list) -> None:
     """
@@ -130,9 +148,10 @@ def afficher_sommaire(lst_articles: list) -> None:
 
     Retourne : None
     """
-    if(isEmpty(lst_articles)):
+    if(is_empty(lst_articles)):
         print("La liste des articles est vide.")
         return None
+    # end if
     print(lst_articles)
     return None
 #...........................................................................................................................
@@ -146,17 +165,17 @@ def quantite_maximale(lst_articles: list) -> int:
 
     Retourne : La quantité la plus haute dans la liste d'articles fournie.
     """
-    if isEmpty(lst_articles):
+    if is_empty(lst_articles):
         print("La liste est vide.")
         return 0
     # end if
-    currentHighest = 0
+    current_highest = 0
     for article in lst_articles:
-        if article[3] > currentHighest:
-            currentHighest = article[3]
+        if article[3] > current_highest:
+            current_highest = article[3]
         # end if
     # end for
-    return currentHighest
+    return current_highest
 
 #...........................................................................................................................
 def quantite_minimale(lst_articles: list) -> int:
@@ -170,23 +189,23 @@ def quantite_minimale(lst_articles: list) -> int:
     Retourne : La quantité la plus basse dans la liste d'articles fournie.
     """
 
-    if isEmpty(lst_articles):
+    if is_empty(lst_articles):
         print("La liste est vide.")
         return 0
     # end if
-    currentSmallest = HIGHEST_INT
+    current_smallest = HIGHEST_INT
     for article in lst_articles:
-        if article[3] < currentSmallest:
-            currentSmallest = article[3]
+        if article[3] < current_smallest:
+            current_smallest = article[3]
         # end if
     # end for
-    return currentSmallest
+    return current_smallest
 
 #...........................................................................................................................
 def menu_selection_page() -> int:
     """
     Afficher le menu du programme et invite l'utilisateur à entrer un entier
-    entre 1 et 9. Fait appel à la méthode saisir_entier mini_maxi de 
+    entre 1 et 9. Fait appel à la méthode saisir_entier mini_maxi de
     la classe Valider_Nombre_A22.
 
     Retourne: l'entier saisi par l'utilisateur qui est >= p_mini et <= p_maxi .
@@ -208,20 +227,20 @@ def menu_selection_page() -> int:
     return saisir_func.saisir_entier_mini_maxi("Saisir Votre choix parmi [1..9]: ", 1, 9)
 
 #...........................................................................................................................
-def create_new_article(articleId: int) -> list:
+def create_new_article(article_id: int) -> list:
     """
     Lit et retourne une liste contenant un nouvel article.
 
-    Méthode qui fait appel à saisir_entier et saisir_entier_mini de 
+    Méthode qui fait appel à saisir_entier et saisir_entier_mini de
     la classe Valider_Nombre_A22.py
 
     Paramètres :
-    articleId : L'indice (ID) du nouvel article.
+    article_id : L'indice (ID) du nouvel article.
 
     Retourne : Une liste contenant le nouvel article.
     """
     return [
-        articleId,
+        article_id,
         input("Nom article:"),
         saisir_func.saisir_reel_mini("Prix: ", 0),
         saisir_func.saisir_entier_mini("Quantité: ", 1)
@@ -239,14 +258,14 @@ def delete_article(lst_articles: list) -> None:
     Retourne : None.
     """
 
-    targetId = saisir_func.saisir_entier("Indice de l'article: ")
-    targetId = chercher_article(lst_articles, targetId)
-    if targetId == -1:
-        print(f"L'article {targetId} n'a pas été trouvé.")
+    target_id = saisir_func.saisir_entier("Indice de l'article: ")
+    target_id = chercher_article(lst_articles, target_id)
+    if target_id == -1:
+        print("L'article n'a pas été trouvé.")
     else:
         i = 0
         for article in lst_articles:
-            if article[0] == targetId:
+            if article[0] == target_id:
                 lst_articles.pop(i)
                 return None
             # end if
@@ -267,14 +286,14 @@ def edit_article_quantity(lst_articles: list) -> None:
     Retourne : None.
     """
 
-    targetId = saisir_func.saisir_entier_mini("Indice de l'article: ", 0)
-    targetId = chercher_article(lst_articles, targetId)
-    if targetId == -1:
-        print(f"L'article {targetId} n'a pas été trouvé.")
+    target_id = saisir_func.saisir_entier_mini("Indice de l'article: ", 0)
+    target_id = chercher_article(lst_articles, target_id)
+    if target_id == -1:
+        print("L'article n'a pas été trouvé.")
     else:
         i = 0
         for article in lst_articles:
-            if article[0] == targetId:
+            if article[0] == target_id:
                 lst_articles[i][3] = saisir_func.saisir_entier_mini("Nouvelle Quantité: ", 1)
             # end if
             i += 1
@@ -291,7 +310,7 @@ def order_lst_articles(lst_articles: list) -> None:
 
     Retourne : None.
     """
-    tempList = []
+    temp_lst = []
     while len(lst_articles) > 0:
         current_smallest = [[HIGHEST_INT], 0]
         i = 0
@@ -301,9 +320,9 @@ def order_lst_articles(lst_articles: list) -> None:
             # end if
             i += 1
         # end for
-        tempList.append(current_smallest[0])
+        temp_lst.append(current_smallest[0])
         lst_articles.pop(current_smallest[1])
     # end while
-    for tempArticle in tempList:
-        lst_articles.append(tempArticle)
+    for temp_article in temp_lst:
+        lst_articles.append(temp_article)
     # end for

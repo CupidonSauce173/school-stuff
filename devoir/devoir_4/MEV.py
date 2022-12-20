@@ -23,7 +23,7 @@ import Menu
 ############ Devoir 4 (MEV) ############
 ########################################
 
-keepRunning = True # Variable de contrôle de la boucle.
+KEEP_RUNNING = True # Variable de contrôle de la boucle.
 
 print("*** Informations Client ***")
 nom = input("Nom: ")
@@ -39,10 +39,9 @@ nom = nom.capitalize()
 prenom = prenom.capitalize()
 
 
-while keepRunning:
+while KEEP_RUNNING:
     choice = Menu.menu_selection_page()
     if choice == 1:
-        # Pas encore implementée.
         Menu.afficher_facture(lst_articles, nom, prenom)
     elif choice == 2:
         Menu.ajouter_article(lst_articles)
@@ -53,14 +52,21 @@ while keepRunning:
     elif choice == 5:
         Menu.order_lst_articles(lst_articles)
     elif choice == 6:
-        print(f"Plus haute quantité: {Menu.quantite_maximale(lst_articles)}")
+        quantite_max = Menu.quantite_maximale(lst_articles)
+        print(f"Plus haute quantité: {quantite_max}")
+        for elem in lst_articles:
+            if elem[3] == quantite_max:
+                print(f"Article {elem[0]} {elem[1]}")
     elif choice == 7:
-        print(f"Plus basse quantité: {Menu.quantite_minimale(lst_articles)}")
+        quantite_min = Menu.quantite_minimale(lst_articles)
+        print(f"Plus basse quantité: {quantite_min}")
+        for elem in lst_articles:
+            if elem[3] == quantite_min:
+                print(f"Article {elem[0]} {elem[1]}")
     elif choice == 8:
-        # Pas encore implementée.
         Menu.afficher_sommaire(lst_articles)
     elif choice == 9:
-        keepRunning = False
+        KEEP_RUNNING = False
     # end if
 # end while
 # ------------------------------------------------------------------------------------------------
