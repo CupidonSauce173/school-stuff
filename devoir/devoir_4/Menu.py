@@ -136,6 +136,7 @@ def afficher_facture(lst_articles: list, nom: str, prenom: str) -> None:
     print(f"TPS: {total_tps}$")
     print(f"TVQ: {total_tvq}$")
     print(f"Montant Avec TTC: {prix_total}$")
+
 #...........................................................................................................................
 def afficher_sommaire(lst_articles: list) -> None:
     """
@@ -148,7 +149,7 @@ def afficher_sommaire(lst_articles: list) -> None:
 
     Retourne : None
     """
-    if(is_empty(lst_articles)):
+    if len(lst_articles) == 0:
         print("La liste des articles est vide.")
         return None
     # end if
@@ -165,7 +166,7 @@ def quantite_maximale(lst_articles: list) -> int:
 
     Retourne : La quantité la plus haute dans la liste d'articles fournie.
     """
-    if is_empty(lst_articles):
+    if len(lst_articles) == 0:
         print("La liste est vide.")
         return 0
     # end if
@@ -189,7 +190,7 @@ def quantite_minimale(lst_articles: list) -> int:
     Retourne : La quantité la plus basse dans la liste d'articles fournie.
     """
 
-    if is_empty(lst_articles):
+    if len(lst_articles) == 0:
         print("La liste est vide.")
         return 0
     # end if
