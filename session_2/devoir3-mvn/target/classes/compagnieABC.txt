@@ -1,0 +1,8 @@
+Manager:456:Albert:22.22:Importations:200.0
+Employe:567:Bernard:11.55
+Employe:678:Chantale:12.66
+Vendeur:789:Denis:14.55:2.0
+Employe:890:Eddie:15.33
+Benevole:987:Francine
+Vendeur:876:Gontrand:12.33:1.0
+Benevole:987:Hector

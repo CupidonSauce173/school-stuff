@@ -1,0 +1,58 @@
+[
+  {
+    "id": 2000,
+    "name": "Statue d'un monstre",
+    "description": "Statue effreyante d'un monstre que je n'ai jamais vue.",
+    "size": 0,
+    "breakable": false
+  },
+  {
+    "id": 2001,
+    "name": "coffre",
+    "description": "Un petit coffre qui n'a pas de valeur",
+    "size": 2,
+    "breakable": false
+  },
+  {
+    "id": 2002,
+    "name": "coffre",
+    "description": "Un gros coffre qui n'a pas de valeur",
+    "size": 3,
+    "breakable": false
+  },
+  {
+    "id": 2003,
+    "name": "coffre",
+    "description": "Magnifique coffre en or",
+    "size": 4,
+    "breakable": false
+  },
+  {
+    "id": 2004,
+    "name": "Chaise",
+    "description": "Une chaise en bois",
+    "size": 1,
+    "breakable": false
+  },
+  {
+    "id": 2005,
+    "name": "Étagère",
+    "description": "Une étagère en bois",
+    "size": 3,
+    "breakable": false
+  },
+  {
+    "id": 2006,
+    "name": "Lit",
+    "description": "Pourquoi il y a un lit ici?",
+    "size": 2,
+    "breakable": false
+  },
+  {
+    "id": 2007,
+    "name": "Vase",
+    "description": "Un vase en porcelaine",
+    "size": 2,
+    "breakable": true
+  }
+]

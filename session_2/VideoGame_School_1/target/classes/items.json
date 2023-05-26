@@ -1,0 +1,151 @@
+[
+  {
+    "id": 1000,
+    "name": "clé 1",
+    "description": "Une clé."
+  },
+  {
+    "id": 1002,
+    "name": "épée en bois",
+    "description": "Une épée pas très forte.",
+    "damage": 10,
+    "durable": true,
+    "baseActions": 5
+  },
+  {
+    "id": 1003,
+    "name": "crochet",
+    "description": "Peut-être que vous pourrez ouvrir des coffres ou des portes avec ?",
+    "durable": true,
+    "baseActions": 2
+  },
+  {
+    "id": 1004,
+    "name": "clé 2",
+    "description": "Une clé."
+  },
+  {
+    "id": 1005,
+    "name": "clé 3",
+    "description": "Une clé."
+  },
+  {
+    "id": 1005,
+    "name": "clé 4",
+    "description": "Une clé."
+  },
+  {
+    "id": 1006,
+    "name": "clé 5",
+    "description": "Une clé."
+  },
+  {
+    "id": 1007,
+    "name": "Lance",
+    "description": "Il y a un pique de fer",
+    "durable": true,
+    "baseActions": 5,
+    "damage": 15
+  },
+  {
+    "id": 1008,
+    "name": "Épée en fer",
+    "description": "Une épée en fer qui fait plus de dommage.",
+    "durable": true,
+    "baseActions": 7,
+    "damage": 20
+  },
+  {
+    "id": 1009,
+    "name": "Collier",
+    "description": "Un petit collier en or"
+  },
+  {
+    "id": 1010,
+    "name": "Pierre magique",
+    "description": "Cette pierre est connecté à moi, elle me prévient quand un monstre est proche.."
+  },
+  {
+    "id": 1011,
+    "name": "Corde",
+    "description": "C'est une corde"
+  },
+  {
+    "id": 1012,
+    "name": "Pierre lumineuse",
+    "description": "Une pierre qui fait une faible lumière verte."
+  },
+  {
+    "id": 1013,
+    "name": "Petite bombe",
+    "description": "Une petite bombe rudimentaire",
+    "durable": true,
+    "baseActions": 1,
+    "damage": 35
+  },
+  {
+    "id": 1014,
+    "name": "Vieux livre - La légende de l'épée de feu",
+    "description": "Il y a de nombreuses années, dans un royaume lointain, un jeune forgeron nommé Galtor \na créé une épée si puissante qu'elle pouvait enflammer les ennemis de son porteur. \nLa légende dit que Galtor a été inspiré par les dieux eux-mêmes, \nqui ont guidé ses mains pour forger l'épée de feu.\n\nLorsque le roi du royaume a appris l'existence \nde l'épée, il a demandé à Galtor de la lui donner en échange \nd'une grande richesse. Mais Galtor a refusé, disant que l'épée était trop \npuissante pour être utilisée à des fins égoïstes.\n\nLe roi, furieux, a envoyé ses soldats pour récupérer l'épée de force. \nMais lorsqu'ils ont tenté de la prendre, l'épée s'est enflammée et a \nbrûlé tous ceux qui ont osé la toucher.\n\nDepuis ce jour, l'épée de feu est restée cachée, \nattendant que quelqu'un de digne la trouve et \nl'utilise pour protéger les faibles et les opprimés.\n"
+  },
+  {
+    "id": 1015,
+    "name": "Vieux livre - La légende du dragon d'or",
+    "description": "Il y a longtemps, dans une contrée lointaine, un dragon vivait dans une caverne d'or. \nLa légende raconte que le dragon avait amassé une grande richesse en \nvolant les trésors des rois et des seigneurs locaux.\n\nUn jour, un chevalier courageux a décidé de tuer le dragon et de récupérer sa fortune. \nIl a parcouru des kilomètres pour arriver à la caverne du dragon, armé de son épée et de son bouclier.\n\nLe dragon, cependant, était plus puissant qu'il ne le pensait. Il a craché du feu sur le chevalier \net a failli le tuer. Mais le chevalier a persisté et a réussi à donner \nun coup fatal au dragon, le faisant tomber mort sur le sol de la caverne.\n\nLe chevalier a ramassé la richesse du dragon et est devenu incroyablement riche. \nMais la richesse n'a pas duré, car il a finalement été trahi \npar ses amis jaloux qui l'ont tué pour s'emparer de sa fortune.\n\nDepuis lors, la légende du dragon d'or est devenue un avertissement sur les \ndangers de la cupidité et sur les risques de chercher à tout prix la richesse."
+  },
+  {
+    "id": 1016,
+    "name": "Vieux livre - La légende de la Dame en Blanc",
+    "description": "Dans un château perché sur une colline, vivait une dame mystérieuse et belle habillée \ntout en blanc. La légende raconte que la Dame en Blanc était en réalité le fantôme d'une femme \nqui avait été trahie et assassinée par son mari jaloux.\n\nOn dit que la Dame en Blanc apparaissait souvent la \nnuit, flottant dans les couloirs du château \navec une lueur surnaturelle entourant son corps. Les visiteurs du \nchâteau étaient souvent terrifiés lorsqu'ils la rencontraient, car on racontait qu'elle pouvait ensorceler ceux qui croisaient son regard.\n\nMais un jour, un chevalier courageux est venu au château.\n Il avait entendu parler de la Dame en Blanc et avait décidé de la libérer de son sortilège. \nIl est entré dans le château la nuit, armé d'une épée et d'une bougie.\n\nLa Dame en Blanc est apparue devant lui, flottant dans \nl'air avec une lueur mystérieuse. Mais le chevalier n'a pas eu peur. \nIl a regardé la Dame en Blanc droit dans les yeux et a vu la tristesse et la douleur dans son regard.\n\nIl a alors compris que la Dame en Blanc avait besoin de repos et de paix, \net qu'il était de son devoir de la libérer de son sortilège. \nIl a décidé de partir en quête de son meurtrier et de le punir pour son crime.\n\nAprès des mois de recherche, le chevalier a finalement trouvé le meurtrier de \nla Dame en Blanc. Il l'a capturé et l'a amené devant \nles autorités pour qu'il soit jugé. Le meurtrier a été condamné à la \nprison à vie, et la Dame en Blanc a finalement été libérée de son sortilège.\n\nDepuis lors, la légende de la Dame en Blanc est devenue un \navertissement sur les dangers de la jalousie et de la trahison, \net sur l'importance de chercher la justice pour ceux qui ont été victimes de tels crimes."
+  },
+  {
+    "id": 1022,
+    "name": "Vieux livre - Le trésor du dragon de feu",
+    "description": "Dans les montagnes escarpées d'un pays lointain, un dragon de feu gardait un trésor mystérieux. \nLa légende racontait que le trésor était si immense qu'il remplissait une caverne entière, \net qu'il était protégé par des flammes brûlantes qui émanait du dragon.\n\nDe nombreux aventuriers ont tenté de s'emparer du trésor, \nmais aucun n'a jamais réussi à vaincre le dragon. Certains ont été brûlés vifs, d'autres ont été jetés dans le vide,\n et d'autres encore ont été piégés dans les tunnels souterrains.\n\nUn jour, un jeune orphelin courageux est venu aux montagnes pour \nchercher le trésor. Il avait entendu parler de la légende et avait \ndécidé de relever le défi. Il s'est armé d'une épée et \nd'une armure légère et a commencé à grimper les montagnes.\n\nIl est finalement arrivé devant la caverne du dragon de feu. Le dragon \nest apparu, crachant des flammes brûlantes, mais le jeune homme n'a pas fléchi. \nIl a couru vers le dragon, esquivant les flammes, et a réussi à lui planter son épée dans le cœur.\n\nLe dragon a rugi une dernière fois et est tombé mort sur le sol. Le \njeune homme s'est alors avancé vers le trésor, en évitant \nles flammes encore brûlantes. Il a ramassé une poignée de pièces d'or, un rubis brillant, et une épée légendaire.\n\nMais il a réalisé que le vrai trésor était en réalité l'amitié et l'admiration \nqu'il avait gagné en vainquant le dragon de feu. Il a quitté la montagne avec une richesse plus grande que tout l'or du monde."
+  },
+  {
+    "id": 1023,
+    "name": "Vieux livre - La malédiction de la pierre noire",
+    "description": "Dans un pays lointain, il y avait une pierre noire géante qui se dressait au milieu d'un champ. \nLa pierre avait été là depuis des siècles et on racontait qu'elle était maudite.\n\nLa légende racontait que quiconque touchait la pierre serait maudit pour toujours. \nLes villageois ont évité la pierre autant que possible, la considérant comme un signe de malheur.\n\nMais un jour, un jeune garçon a été défié par ses amis de toucher la pierre noire. \nIl a ignoré les avertissements des villageois et a touché la pierre avec sa main.\n\nAu début, rien ne s'est passé. Mais plus tard, le garçon a commencé à ressentir\nune douleur insupportable dans sa main. La douleur s'est rapidement étendue \nà tout son corps, le laissant incapable de se lever ou de parler.\n\nLes villageois ont essayé de guérir le garçon, mais rien n'a fonctionné. \nFinalement, ils ont compris que la légende de la malédiction de la pierre noire était vraie.\n\nLe garçon a passé le reste de sa vie enfermé dans une petite pièce, \nincapable de bouger ou de parler. Les villageois ont laissé la pierre noire \ntranquille depuis lors, sachant que la malédiction était trop dangereuse pour être ignorée.\n\nCes légendes sont encore racontées de nos jours dans le pays lointain \noù elles ont été créées, rappelant aux gens que le monde est rempli \nde mystères et de dangers, mais aussi de courage et de détermination."
+  },
+  {
+    "id": 1024,
+    "name": "Vieux livre - Le chevalier solitaire",
+    "description": "Dans une époque lointaine, un jeune chevalier nommé William avait juré de protéger son royaume contre tous les ennemis. \nIl avait combattu aux côtés de ses frères d'armes pendant des années, \nmais lors d'une bataille épique, tous les chevaliers ont été tués sauf lui.\n\nWilliam a survécu, mais il était seul et sans but. Il a erré pendant des jours \njusqu'à ce qu'il arrive à une forêt dense. Là, il a rencontré une fée qui \nlui a dit qu'il devait accomplir une quête pour prouver sa valeur.\n\nWilliam a accepté le défi et a commencé sa quête pour trouver le joyau \nle plus rare du royaume. Pendant des mois, il a voyagé à travers le pays, \naffrontant des monstres, surmontant des obstacles et aidant les gens qu'il rencontrait en chemin.\n\nFinalement, William est arrivé au château du roi, où se trouvait le joyau \nrare qu'il cherchait. Mais pour y accéder, il devait vaincre \nle dragon gardien qui se dressait devant lui.\n\nWilliam a accepté le défi et a combattu le dragon. Le combat \na été difficile, mais grâce à sa force, son intelligence et \nsa détermination, William a réussi à vaincre le dragon et à obtenir le joyau rare.\n\nIl est retourné à la forêt pour remettre le joyau à la fée, \nmais elle lui a dit qu'il n'était plus nécessaire. William avait déjà prouvé sa valeur e\nn accomplissant la quête avec courage et détermination.\n\nWilliam est retourné au château du roi, où il a été accueilli \ncomme un héros et a vécu le reste de sa vie en paix.\n\nCette légende est racontée aux jeunes chevaliers pour leur rappeler que même \ndans les moments les plus sombres, la force de la volonté peut leur permettre d\ne surmonter les plus grands défis."
+  },
+  {
+    "id": 1017,
+    "name": "Bougie éteinte",
+    "description": "Une bougie qui ne s'allume plus."
+  },
+  {
+    "id": 1018,
+    "name": "carte du donjon",
+    "description": "Une carte que je ne comprends absolument pas."
+  },
+  {
+    "id": 1019,
+    "name": "médaillon en argent",
+    "description": "Un magnifique médaillon en argent."
+  },
+  {
+    "id": 1020,
+    "name": "Chaîne en acier",
+    "description": "Une chaîne trop lourde pour que je puisse la prendre."
+  },
+  {
+    "id": 1021,
+    "name": "Sac d'or",
+    "description": "Un petit sac rempli de pièces d'or"
+  },
+  {
+    "id": 1025,
+    "name": "lanterne",
+    "description": "Elle fait de la lumière!"
+  },
+  {
+    "id": 1026,
+    "name": "Potion de vie",
+    "description": "Redonne +25 HP"
+  }
+]
